@@ -1,0 +1,51 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Light background to see the black box clearly */
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+  
+  .inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .relative {
+    position: relative;
+  }
+  
+  .z-50 {
+    z-index: 50;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .bg-black {
+    background-color: black;
+  }
+  

@@ -1,0 +1,105 @@
+  
+  .form-container {
+    margin-top: 2rem;
+    background-color: #fff;
+    padding: 4rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    font-family: Newsletter;
+  }
+  
+  .logo-container-signup {
+    display: flex;
+    color: #256b1fda;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .sign-link{
+    color: #256b1f
+  }
+
+  .signupown{
+    margin-top: 0.1rem;
+    margin-bottom: 1;
+    line-height: 1rem;
+    height: 4rem;
+    width: 8rem;
+  }
+  
+  .signupownerspan {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000000;
+    line-height: 0.1;
+  }
+
+  .textofacc {
+    font-size: 0.2rem;
+    color: #0000009f;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  label {
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .signupownerbutton {
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #256b1f;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .signupownerbutton:hover {
+    background-color: #256b1f;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .form-container {
+      padding: 1rem;
+    }
+  
+    input,
+    select,
+    textarea {
+      padding: 0.5rem;
+    }
+  
+    .signupownerbutton {
+      padding: 0.75rem;
+    }
+  }
+  

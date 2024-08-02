@@ -1,0 +1,9 @@
+.navbutton{
+    background-color: #256b1f;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    width: 9rem;
+    height: 2rem;
+    margin-top: 0.5rem;
+}

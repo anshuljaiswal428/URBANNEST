@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.full_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.heading-container {
+    font-family: Newsreader;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    position: relative; /* Make sure content is positioned relatively */
+}
+
+.heading-container h1 {
+    text-align: center;
+    font-size: 4rem;
+    line-height: 1.5;
+    font-weight: 400;
+    height: auto;
+}
+
+.heading-container h6 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 0.1rem;
+}
+
+.two-box-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative; /* Make sure content is positioned relatively */
+}
+
+.divi {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Make sure content is positioned relatively */
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4; /* Control the opacity of the background here */
+    z-index: 1; /* Make sure the overlay is behind the content */
+}
+
+.sectionleft .background-overlay {
+    background: linear-gradient(to bottom, #215e29, transparent); /* Gradient from green to transparent */
+}
+
+.sectionright .background-overlay {
+    background: linear-gradient(to bottom, #215e29, transparent);
+}
+
+.leftcontent, .rightcontent {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    border-radius: 0.8rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    z-index: 2; /* Make sure the content is in front of the overlay */
+    position: relative; /* Ensure content is positioned relative to the overlay */
+}
+
+.leftcontent, .rightcontent {
+    width: 20rem;
+    height: 20rem;
+}
+
+.leftcontent:hover, .rightcontent:hover {
+    margin: 4rem;
+    box-shadow: 0 1px 1em #256b1fa5;
+}
+
+.owner-left, .customer-right{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.customer-right, .owner-image{
+    margin-bottom: 1rem;
+}
+
+.right-head, .left-head{
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: Newsreader;
+    margin-bottom: 1rem;
+}
+
+.right-subhead, .left-subhead{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+
+
+
+/* Responsive CSS styles */
+@media (max-width: 1256px) and (min-width: 499px){
+    .two-box-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: relative; /* Make sure content is positioned relatively */
+    }
+}
+
+@media (max-width: 498px) and (min-width: 441px) {
+    .heading-container h1 {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 1;
+        font-weight: 400;
+        height: auto;
+    }
+    
+    .heading-container h6 {
+        text-align: center;
+        font-size: 0.5rem;
+        font-weight: 400;
+        margin-top: 0.1rem;
+    }
+
+    .two-box-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: relative; /* Make sure content is positioned relatively */
+    }
+
+    .leftcontent, .rightcontent {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        border-radius: 0.8rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        z-index: 2; /* Make sure the content is in front of the overlay */
+        position: relative; /* Ensure content is positioned relative to the overlay */
+    }
+    
+    .leftcontent, .rightcontent {
+        width: 100%;
+        height: 20rem;
+    }
+}
+
+@media (max-width: 440px) {
+
+    .heading-container h1 {
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1;
+        font-weight: 400;
+        height: auto;
+    }
+    
+    .heading-container h6 {
+        text-align: center;
+        font-size: 0.2rem;
+        font-weight: 400;
+        margin-top: 0.1rem;
+    }
+
+    .two-box-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: relative; /* Make sure content is positioned relatively */
+    }
+
+    .owner-left, .customer-right{
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+    }
+    
+    .customer-right, .owner-image{
+        margin-bottom: 1rem;
+    }
+    
+    .right-head, .left-head{
+        font-size: 1.6rem;
+        font-weight: 400;
+        font-family: Newsreader;
+        margin-bottom: 1rem;
+    }
+    
+    .right-subhead, .left-subhead{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
