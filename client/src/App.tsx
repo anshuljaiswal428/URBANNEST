@@ -5,7 +5,7 @@ import Home from "./_root/pages/Home/Home";
 import About from "./_root/pages/About/About";
 import ContactUs from "./_root/pages/ContactUs/ContactUs";
 import Error from "./components/Error/Error";
-import FindPg from "./_root/pages/FindPg/FindPg";
+import FindYourNest from "./_root/pages/FindYourNest/FindYourNest";
 import Howitworks from "./_root/pages/HowItWorksGuide/Howitworks";
 import TwoBox from "./components/TwoBox/TwoBox";
 import SignUpOwner from "./_auth/forms/Signup/SignUpOwner";
@@ -22,7 +22,7 @@ function App() {
           <Route path="/About" element={<About/>}/>
           <Route path="/ContactUs" element={<ContactUs/>}/>
           <Route path="/Howitworks" element={<Howitworks/>}/>
-          <Route path="/Findpg" element={<FindPg/>}/>
+          <Route path="/find-your-nest" element={<FindYourNest/>}/>
         </Route>
         <Route path="/auth" element={<AuthLayout />}>
           <Route path="/auth" element={<TwoBox/>}/>

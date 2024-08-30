@@ -25,7 +25,7 @@ const NavBar = () => {
                             <NavLink to="/" onClick={() => setShowMediaIcons(false)}>Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/Findpg" onClick={() => setShowMediaIcons(false)}>Find PG</NavLink>
+                            <NavLink to="/find-your-nest" onClick={() => setShowMediaIcons(false)}>Find Your Nest</NavLink>
                         </li>
                         <li>
                             <NavLink to="/About" onClick={() => setShowMediaIcons(false)}>About Us</NavLink>

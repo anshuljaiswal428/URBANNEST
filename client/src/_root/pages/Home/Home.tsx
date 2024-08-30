@@ -17,10 +17,10 @@ const Home = () => {
               <img src="/public/assets/homepageimages/OwnerContent.jpeg" alt="Urban Nest Logo" className="owner-left" />
             </div>
             <div className='left-head'>
-              <span>Become a Advanced PG Owner</span>
+              <span>Become a Advanced Nest Owner</span>
             </div>
             <div className='left-subhead'>
-              <span>List Your PG with Us and Simplify Your Management Process.</span>
+              <span>List Your Nest with Us and Simplify Your Management Process.</span>
             </div>
           </div>
         </div>
@@ -31,7 +31,7 @@ const Home = () => {
               <img src="/public/assets/homepageimages/Customer.png" alt="Urban Nest Logo" className="customer-right" />
             </div>
             <div className='right-head'>
-              <span>Discover Your Perfect PG</span>
+              <span>Discover Your Perfect Nest</span>
             </div>
             <div className='right-subhead'>
               <span>Browse Verified Listings and Enjoy a Seamless Booking Experience.</span>

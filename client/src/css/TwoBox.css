@@ -10,7 +10,7 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    position: relative; /* Make sure content is positioned relatively */
+    position: relative; 
 }
 
 .divi {
@@ -65,7 +65,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.right-head, .left-head{
+.right-head, .left-head {
     font-size: 2rem;
     font-weight: 400;
     font-family: Newsreader;

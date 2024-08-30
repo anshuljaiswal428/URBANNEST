@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { auth, db } from '../../../firebase';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, AuthErrorCodes } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
 import '/src/css/Sign.css';
@@ -50,6 +50,7 @@ const SignUpCustomer: React.FC = () => {
   };
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    // Update the file in the state, but do not set the value on the input element.
     if (e.target.files && e.target.files[0]) {
       setFormData({ ...formData, profilePicture: e.target.files[0] });
     }
@@ -85,9 +86,13 @@ const SignUpCustomer: React.FC = () => {
       });
 
       alert("User registered successfully!");
-    } catch (error) {
-      console.error("Error registering user: ", error);
-      alert("Error registering user");
+    } catch (error: any) {
+      // Handle specific Firebase auth errors.
+      if (error.code === AuthErrorCodes.EMAIL_EXISTS) {
+        alert("This email is already in use. Please use a different email or log in.");
+      } else {
+        alert(`Error registering user: ${error.message}`);
+      }
     }
   };
 
@@ -165,24 +170,18 @@ const SignUpCustomer: React.FC = () => {
           <select id="maritalStatus" name="maritalStatus" value={formData.maritalStatus} onChange={handleChange}>
             <option value="single">Single</option>
             <option value="married">Married</option>
-            <option value="widow">Widow</option>
-            <option value="divorce">Divorce</option>
+            <option value="other">Other</option>
           </select>
         </div>
         <div className="form-group">
           <label htmlFor="profilePicture">Profile Picture</label>
-          <input type="file" id="profilePicture" name="profilePicture" onChange={handleFileChange} />
+          <input type="file" id="profilePicture" name="profilePicture" accept="image/*" onChange={handleFileChange} />
         </div>
-        <button className="signupownerbutton" type="submit">
-          Sign Up
-        </button>
+        <button className="signupownerbutton" type="submit">Sign Up</button>
+        <div className="login-option">
+          <p>Already have an account? <Link to='/signin'>Login</Link></p>
+        </div>
       </form>
-      <p>
-        Already have an account?
-        <Link to="/auth/Sign-in" className="sign-link">
-          Log in
-        </Link>
-      </p>
     </div>
   );
 };
